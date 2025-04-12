@@ -1,0 +1,89 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: linear-gradient(to right, #2193b0, #6dd5ed);
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.calculator {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    overflow: hidden;
+}
+
+.display {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 1.5rem;
+    text-align: right;
+}
+
+.previous-operand {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.75);
+    min-height: 1.5rem;
+}
+
+.current-operand {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-top: 0.5rem;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+    padding: 2px;
+}
+
+button {
+    font-size: 1.25rem;
+    padding: 1.5rem;
+    border: none;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+button:hover {
+    background-color: #e0e0e0;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+button[data-operation] {
+    background-color: #f8f9fa;
+}
+
+button.equals {
+    background-color: #4CAF50;
+    color: white;
+}
+
+button.clear {
+    background-color: #ff6b6b;
+    color: white;
+}
+
+button[data-action="delete"] {
+    background-color: #ff9f43;
+    color: white;
+}
